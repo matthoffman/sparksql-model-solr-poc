@@ -16,7 +16,7 @@ Install spark. [Download link: http://www.apache.org/dyn/closer.cgi/spark/spark-
 
 Procedure:
 
-1)	Clone the project into your local repo. 
+1)	Clone the project into your local repo.
 
 Git clone https://github.com/ganeshk7/sparksql-model-solr-poc.git
 
@@ -41,13 +41,13 @@ mvn clean install
 
 ./bin/spark-submit –class <<ClassName>> --master local[4] –jars <<ExternalJars>> <<Jar containing your class>>
 
-We need to include the external Jar “spark-solr-1.0-SNAPSHOT.jar” as well. 
+We need to include the external Jar “spark-solr-1.0-SNAPSHOT.jar” as well.
 
 ./bin/spark-submit --class DecisionTreeTest --master local[4] --jars /Users/ganeshkumar/spark-solr/target/spark-solr-1.0-SNAPSHOT.jar /Users/ganeshkumar/myCode/ML1/target/ml1-1.0.jar
  
 ./bin/spark-submit --class NaiveBayesTest --master local[4] --jars /Users/ganeshkumar/spark-solr/target/spark-solr-1.0-SNAPSHOT.jar /Users/ganeshkumar/myCode/ML1/target/ml1-1.0.jar
  
-./bin/spark-submit --class MultiNomialLogistic --master local[4] --jars /Users/ganeshkumar/spark-solr/target/spark-solr-1.0-SNAPSHOT.jar /Users/ganeshkumar/myCode/ML1/target/ml1-1.0.jar
+./bin/spark-submit --class MultinomialLogistic --master local[4] --jars /Users/ganeshkumar/spark-solr/target/spark-solr-1.0-SNAPSHOT.jar /Users/ganeshkumar/myCode/ML1/target/ml1-1.0.jar
 
 
 Note: This works for the basic data type conversions and Vector type. However, coversion is yet to be implemented for Labelled Point, Local Matrix and Distributed Matrix.
